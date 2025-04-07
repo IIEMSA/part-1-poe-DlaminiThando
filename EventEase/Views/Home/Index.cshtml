@@ -1,0 +1,121 @@
+﻿@{
+    ViewData["Title"] = "Welcome to Event Ease";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<style>
+    body {
+        background-color: #121212;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        margin: 0;
+        padding: 0;
+        color: #e0e0e0;
+    }
+
+    .hero-section {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        text-align: center;
+        padding: 0 20px;
+    }
+
+    .hero-card {
+        background-color: #1e1e1e;
+        border-radius: 20px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8);
+        padding: 50px 40px;
+        max-width: 900px;
+        margin: 20px;
+    }
+
+        .hero-card h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            color: #00bfff;
+            margin-bottom: 20px;
+        }
+
+        .hero-card p {
+            font-size: 1.25rem;
+            color: #cfcfcf;
+            margin-bottom: 40px;
+            line-height: 1.6;
+        }
+
+    .hero-buttons {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+    }
+
+        .hero-buttons a {
+            padding: 14px 30px;
+            font-size: 1.1rem;
+            border-radius: 12px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            font-weight: 500;
+            text-align: center;
+            color: white;
+        }
+
+            .hero-buttons a:hover {
+                transform: translateY(-3px);
+                box-shadow: 0 8px 18px rgba(255, 255, 255, 0.1);
+            }
+
+    .btn-outline-primary {
+        background-color: #007bff;
+        border: 2px solid #007bff;
+    }
+
+    .btn-outline-success {
+        background-color: #28a745;
+        border: 2px solid #28a745;
+    }
+
+    .btn-outline-dark {
+        background-color: #6c757d;
+        border: 2px solid #6c757d;
+    }
+
+    .footer-note {
+        margin-top: 40px;
+        font-size: 1rem;
+        color: #aaaaaa;
+        font-weight: 400;
+    }
+
+        .footer-note strong {
+            color: #00bfff;
+        }
+</style>
+
+<section class="hero-section">
+    <div class="hero-card">
+        <h1>Welcome to <span class="text-primary">Event Ease</span></h1>
+        <p>
+            Simplify your event planning and booking process.<br />
+            Manage venues, schedule events, and handle bookings — all in one sleek platform.
+        </p>
+
+        <div class="hero-buttons">
+            <a asp-controller="Venues" asp-action="Index" class="btn btn-outline-primary">
+                🏛️ View Venues
+            </a>
+            <a asp-controller="Events" asp-action="Index" class="btn btn-outline-success">
+                🎉 Explore Events
+            </a>
+            <a asp-controller="Bookings" asp-action="Index" class="btn btn-outline-dark">
+                📅 Manage Bookings
+            </a>
+        </div>
+
+        <div class="footer-note">
+            Built with <strong>ASP.NET Core MVC</strong> • Designed to empower event creators
+        </div>
+    </div>
+</section>
